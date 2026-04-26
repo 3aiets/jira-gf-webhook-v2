@@ -5,6 +5,11 @@ __pycache__/
 .venv/
 venv/
 .env
+.oauth_tokens.json
+.oauth_tokens.json.tmp
+
+# Scheduled-task output
+logs/
 
 # Local event store
 !events/

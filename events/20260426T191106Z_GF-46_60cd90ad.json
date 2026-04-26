@@ -1,0 +1,250 @@
+{
+  "parsed": {
+    "issue_key": "GF-46",
+    "summary": "Test User tasks",
+    "status": "In Progress",
+    "priority": "High",
+    "assignee": "Test User",
+    "reporter": "Test User",
+    "project_key": "GF",
+    "issue_url": "https://your-tenant.atlassian.net/rest/api/2/issue/10138",
+    "event_type": "jira:issue_updated",
+    "event_timestamp": "2026-04-26T19:11:06.177000+00:00",
+    "received_at": "2026-04-26T19:11:06.853052+00:00"
+  },
+  "raw": {
+    "issue": {
+      "id": "10138",
+      "self": "https://your-tenant.atlassian.net/rest/api/2/issue/10138",
+      "key": "GF-46",
+      "fields": {
+        "statuscategorychangedate": "2026-04-25T21:43:54.880+0200",
+        "issuetype": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/issuetype/10021",
+          "id": "10021",
+          "description": "Tasks track small, distinct pieces of work.",
+          "iconUrl": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+          "name": "Task",
+          "subtask": false,
+          "avatarId": 10318,
+          "entityId": "3fd2e65d-27ff-4988-8f34-697a51a365e6",
+          "hierarchyLevel": 0
+        },
+        "parent": {
+          "id": "10136",
+          "key": "GF-45",
+          "self": "https://your-tenant.atlassian.net/rest/api/2/issue/10136",
+          "fields": {
+            "summary": "Team Administrative Tasks",
+            "status": {
+              "self": "https://your-tenant.atlassian.net/rest/api/2/status/10033",
+              "description": "This work item is being actively worked on at the moment by the assignee.",
+              "iconUrl": "https://your-tenant.atlassian.net/",
+              "name": "In Progress",
+              "id": "10033",
+              "statusCategory": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/statuscategory/4",
+                "id": 4,
+                "key": "indeterminate",
+                "colorName": "yellow",
+                "name": "In Progress"
+              }
+            },
+            "priority": {
+              "self": "https://your-tenant.atlassian.net/rest/api/2/priority/3",
+              "iconUrl": "https://your-tenant.atlassian.net/images/icons/priorities/medium_new.svg",
+              "name": "Medium",
+              "id": "3"
+            },
+            "issuetype": {
+              "self": "https://your-tenant.atlassian.net/rest/api/2/issuetype/10022",
+              "id": "10022",
+              "description": "Epics track collections of related bugs, stories, and tasks.",
+              "iconUrl": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10307?size=medium",
+              "name": "Epic",
+              "subtask": false,
+              "avatarId": 10307,
+              "entityId": "d23a108a-267a-4909-8df5-77163897f9ab",
+              "hierarchyLevel": 1
+            }
+          }
+        },
+        "components": [],
+        "timespent": 81000,
+        "timeoriginalestimate": null,
+        "description": "Test User tasks 12",
+        "project": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/project/10005",
+          "id": "10005",
+          "key": "GF",
+          "name": "GFM.DataProcessing",
+          "projectTypeKey": "software",
+          "simplified": true,
+          "avatarUrls": {
+            "48x48": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10419",
+            "24x24": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10419?size=small",
+            "16x16": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10419?size=xsmall",
+            "32x32": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10419?size=medium"
+          }
+        },
+        "fixVersions": [],
+        "statusCategory": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/statuscategory/4",
+          "id": 4,
+          "key": "indeterminate",
+          "colorName": "yellow",
+          "name": "In Progress"
+        },
+        "aggregatetimespent": 81000,
+        "resolution": null,
+        "timetracking": {
+          "remainingEstimate": "0m",
+          "timeSpent": "2d 6h 30m",
+          "remainingEstimateSeconds": 0,
+          "timeSpentSeconds": 81000
+        },
+        "customfield_10015": null,
+        "security": null,
+        "attachment": [],
+        "aggregatetimeestimate": 0,
+        "resolutiondate": null,
+        "workratio": -1,
+        "summary": "Test User tasks",
+        "issuerestriction": {
+          "issuerestrictions": {},
+          "shouldDisplay": true
+        },
+        "lastViewed": "2026-04-26T20:07:57.292+0200",
+        "watches": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/issue/GF-46/watchers",
+          "watchCount": 1,
+          "isWatching": true
+        },
+        "creator": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+          "accountId": "712020:00000000-0000-0000-0000-000000000000",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+          },
+          "displayName": "Test User",
+          "active": true,
+          "timeZone": "Europe/Madrid",
+          "accountType": "atlassian"
+        },
+        "subtasks": [],
+        "created": "2025-05-07T14:36:20.265+0200",
+        "reporter": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+          "accountId": "712020:00000000-0000-0000-0000-000000000000",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+          },
+          "displayName": "Test User",
+          "active": true,
+          "timeZone": "Europe/Madrid",
+          "accountType": "atlassian"
+        },
+        "customfield_10021": null,
+        "aggregateprogress": {
+          "progress": 81000,
+          "total": 81000,
+          "percent": 100
+        },
+        "priority": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/priority/2",
+          "iconUrl": "https://your-tenant.atlassian.net/images/icons/priorities/high_new.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_10001": null,
+        "labels": [],
+        "environment": null,
+        "customfield_10019": "0|i00052:",
+        "timeestimate": 0,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "duedate": null,
+        "progress": {
+          "progress": 81000,
+          "total": 81000,
+          "percent": 100
+        },
+        "issuelinks": [],
+        "votes": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/issue/GF-46/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "assignee": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+          "accountId": "712020:00000000-0000-0000-0000-000000000000",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+          },
+          "displayName": "Test User",
+          "active": true,
+          "timeZone": "Europe/Madrid",
+          "accountType": "atlassian"
+        },
+        "updated": "2026-04-26T21:11:06.177+0200",
+        "status": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/status/10033",
+          "description": "This work item is being actively worked on at the moment by the assignee.",
+          "iconUrl": "https://your-tenant.atlassian.net/",
+          "name": "In Progress",
+          "id": "10033",
+          "statusCategory": {
+            "self": "https://your-tenant.atlassian.net/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    "issue_event_type_name": "issue_updated",
+    "changelog": {
+      "id": "11685",
+      "items": [
+        {
+          "field": "description",
+          "fieldtype": "jira",
+          "fieldId": "description",
+          "from": null,
+          "fromString": "Test User tasks 11",
+          "to": null,
+          "toString": "Test User tasks 12"
+        }
+      ]
+    },
+    "webhookEvent": "jira:issue_updated",
+    "user": {
+      "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+      "accountId": "712020:00000000-0000-0000-0000-000000000000",
+      "avatarUrls": {
+        "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+        "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+        "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+        "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+      },
+      "displayName": "Test User",
+      "active": true,
+      "timeZone": "Europe/Madrid",
+      "accountType": "atlassian"
+    },
+    "matchedWebhookIds": [
+      2
+    ],
+    "timestamp": 1777230666177
+  }
+}

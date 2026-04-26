@@ -1,9 +1,20 @@
-"""FastAPI application — receives Jira Cloud Automation webhooks for project GF.
+"""FastAPI application — receives Jira Cloud webhook deliveries for project GF.
 
 Endpoints
 ---------
 GET  /healthz          -> liveness probe
-POST /webhooks/jira    -> webhook receiver (validates secret, parses, persists)
+POST /webhooks/jira    -> webhook receiver
+
+Inbound auth is selected by ``settings.auth_mode``:
+  * ``jwt``           — modern OAuth 2.0 platform webhook. Verifies the
+                        ``Authorization: Bearer <JWT>`` header (HS256, signed
+                        with the OAuth app's client_secret).
+  * ``shared_secret`` — legacy Jira Automation rule. Verifies the
+                        ``X-Webhook-Secret`` header against ``WEBHOOK_SECRET``.
+
+Replay/dedup uses ``X-Atlassian-Webhook-Identifier`` with an in-process LRU
+(plan flagged Redis/SQLite as a future swap). ``X-Atlassian-Webhook-Retry`` is
+logged so retried deliveries are visible.
 """
 
 from __future__ import annotations
@@ -12,13 +23,16 @@ import hmac
 import json
 import logging
 import sys
-from typing import Any, Dict
+from collections import OrderedDict
+from threading import Lock
+from typing import Any, Dict, Optional
 
+import jwt as pyjwt
 from fastapi import FastAPI, Header, HTTPException, Request, status
 from fastapi.responses import JSONResponse
 from pydantic import ValidationError
 
-from .config import settings
+from .config import AUTH_MODE_JWT, AUTH_MODE_SHARED_SECRET, settings
 from .models import JiraWebhookPayload, ParsedEvent
 from .storage import save_event
 
@@ -65,13 +79,86 @@ logger = _configure_logging()
 
 
 # --------------------------------------------------------------------------- #
+# Inbound auth
+# --------------------------------------------------------------------------- #
+
+def _verify_shared_secret(provided: Optional[str]) -> None:
+    """Legacy path — constant-time compare against WEBHOOK_SECRET."""
+    if not provided or not settings.webhook_secret or not hmac.compare_digest(
+        provided, settings.webhook_secret
+    ):
+        logger.warning("rejected webhook: invalid or missing secret")
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="invalid or missing X-Webhook-Secret",
+        )
+
+
+def _verify_jwt(authorization: Optional[str]) -> Optional[str]:
+    """Verify Atlassian's HS256 bearer JWT signed with the app's client_secret.
+
+    Empirically Atlassian webhook JWTs carry: iss, sub, exp, iat, jti, context.
+    No aud, no nbf. We enforce signature + exp + iss==client_id and tolerate
+    120s of clock skew. Returns the ``sub`` claim (the actor's Atlassian
+    account id) so it can be logged as a breadcrumb on the success path.
+    """
+    if not authorization or not authorization.lower().startswith("bearer "):
+        logger.warning("rejected webhook: missing bearer token")
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="missing or malformed Authorization header",
+        )
+    token = authorization.split(" ", 1)[1].strip()
+    try:
+        claims = pyjwt.decode(
+            token,
+            settings.atlassian_client_secret,
+            algorithms=["HS256"],
+            leeway=120,
+            issuer=settings.atlassian_client_id,
+            options={"require": ["exp", "iss"], "verify_aud": False},
+        )
+    except pyjwt.InvalidTokenError as exc:
+        # Never log the token itself — only the failure class.
+        logger.warning("rejected webhook: invalid JWT", extra={"reason": type(exc).__name__})
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="invalid or expired bearer token",
+        )
+    return claims.get("sub")
+
+
+# --------------------------------------------------------------------------- #
+# In-memory LRU dedup keyed by X-Atlassian-Webhook-Identifier
+# --------------------------------------------------------------------------- #
+
+_DEDUP_MAX = 10_000
+_dedup_seen: "OrderedDict[str, None]" = OrderedDict()
+_dedup_lock = Lock()
+
+
+def _dedup_check_and_record(delivery_id: Optional[str]) -> bool:
+    """Return True if this delivery_id was already seen (caller should short-circuit)."""
+    if not delivery_id:
+        return False
+    with _dedup_lock:
+        if delivery_id in _dedup_seen:
+            _dedup_seen.move_to_end(delivery_id)
+            return True
+        _dedup_seen[delivery_id] = None
+        if len(_dedup_seen) > _DEDUP_MAX:
+            _dedup_seen.popitem(last=False)
+        return False
+
+
+# --------------------------------------------------------------------------- #
 # FastAPI app
 # --------------------------------------------------------------------------- #
 
 app = FastAPI(
     title="Jira GF Webhook Receiver",
     version="2.0.0-dev",
-    description="Receives Jira Cloud Automation webhooks for project GF.",
+    description="Receives Jira Cloud webhooks (platform OAuth 3LO or legacy Automation) for project GF.",
 )
 
 
@@ -80,28 +167,51 @@ def healthz() -> Dict[str, str]:
     return {"status": "ok"}
 
 
-def _verify_secret(provided: str | None) -> None:
-    """Constant-time comparison so the response time doesn't leak the secret."""
-    if not provided or not hmac.compare_digest(provided, settings.webhook_secret):
-        # Log without echoing the provided value — we don't want secrets in logs
-        # even if someone spams the wrong one.
-        logger.warning("rejected webhook: invalid or missing secret")
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="invalid or missing X-Webhook-Secret",
-        )
-
-
 @app.post("/webhooks/jira")
 async def receive_jira_webhook(
     request: Request,
-    x_webhook_secret: str | None = Header(default=None, alias="X-Webhook-Secret"),
+    authorization: Optional[str] = Header(default=None, alias="Authorization"),
+    x_webhook_secret: Optional[str] = Header(default=None, alias="X-Webhook-Secret"),
+    x_atlassian_webhook_identifier: Optional[str] = Header(
+        default=None, alias="X-Atlassian-Webhook-Identifier"
+    ),
+    x_atlassian_webhook_retry: Optional[str] = Header(
+        default=None, alias="X-Atlassian-Webhook-Retry"
+    ),
 ) -> JSONResponse:
-    _verify_secret(x_webhook_secret)
+    # Read raw bytes first — needed before we choose a parse path, and matches
+    # the plan: parsing should not run before authn.
+    body_bytes = await request.body()
 
-    # Parse JSON ourselves so we control the error response shape on bad bodies.
+    actor_sub: Optional[str] = None
+    if settings.auth_mode == AUTH_MODE_JWT:
+        actor_sub = _verify_jwt(authorization)
+    elif settings.auth_mode == AUTH_MODE_SHARED_SECRET:
+        _verify_shared_secret(x_webhook_secret)
+    else:  # defensive — Settings.load() already validates this
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="server auth mode misconfigured",
+        )
+
+    # Dedup on Atlassian's delivery id (platform webhook only sends this; legacy
+    # Automation does not, so this is a no-op there).
+    if _dedup_check_and_record(x_atlassian_webhook_identifier):
+        logger.info(
+            "duplicate delivery ignored",
+            extra={
+                "delivery_id": x_atlassian_webhook_identifier,
+                "retry": x_atlassian_webhook_retry,
+                "dedup_hit": True,
+            },
+        )
+        return JSONResponse(
+            status_code=status.HTTP_200_OK,
+            content={"ok": True, "dedup": True},
+        )
+
     try:
-        raw: Dict[str, Any] = await request.json()
+        raw: Dict[str, Any] = json.loads(body_bytes)
     except json.JSONDecodeError as exc:
         logger.warning("rejected webhook: malformed JSON", extra={"error": str(exc)})
         raise HTTPException(
@@ -118,7 +228,6 @@ async def receive_jira_webhook(
     try:
         payload = JiraWebhookPayload.model_validate(raw)
     except ValidationError as exc:
-        # Most common cause: missing `issue.key`. Surface a useful error.
         logger.warning(
             "rejected webhook: payload missing required fields",
             extra={"errors": exc.errors()},
@@ -130,8 +239,6 @@ async def receive_jira_webhook(
 
     parsed = ParsedEvent.from_payload(payload)
 
-    # Optional project allow-list — protects against accidentally pointing
-    # another project's automation at this endpoint.
     if settings.allowed_project_keys:
         if not parsed.project_key or parsed.project_key not in settings.allowed_project_keys:
             logger.warning(
@@ -169,6 +276,10 @@ async def receive_jira_webhook(
             "priority": parsed.priority,
             "assignee": parsed.assignee,
             "stored_at": str(path),
+            "delivery_id": x_atlassian_webhook_identifier,
+            "retry": x_atlassian_webhook_retry,
+            "auth_mode": settings.auth_mode,
+            "actor_sub": actor_sub,
         },
     )
 

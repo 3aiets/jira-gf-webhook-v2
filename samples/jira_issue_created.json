@@ -4,8 +4,8 @@
   "issue_event_type_name": "issue_created",
   "user": {
     "accountId": "5b10a2844c20165700ede21g",
-    "displayName": "Igor Reporter",
-    "emailAddress": "3aiets@gmail.com"
+    "displayName": "Test Reporter",
+    "emailAddress": "user@sample.com"
   },
   "issue": {
     "id": "10042",
@@ -37,8 +37,8 @@
       },
       "reporter": {
         "accountId": "5b10a2844c20165700ede21g",
-        "displayName": "Igor Reporter",
-        "emailAddress": "3aiets@gmail.com"
+        "displayName": "Test Reporter",
+        "emailAddress": "user@sample.com"
       },
       "labels": ["webhook", "smoke-test"],
       "created": "2026-04-25T12:00:00.000+0000",

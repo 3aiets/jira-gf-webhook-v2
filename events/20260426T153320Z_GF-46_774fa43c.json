@@ -1,0 +1,687 @@
+{
+  "parsed": {
+    "issue_key": "GF-46",
+    "summary": "Test User tasks",
+    "status": "In Progress",
+    "priority": "High",
+    "assignee": "Test User",
+    "reporter": "Test User",
+    "project_key": "GF",
+    "issue_url": "https://your-tenant.atlassian.net/rest/api/2/issue/10138",
+    "event_type": null,
+    "event_timestamp": "2026-04-26T15:33:18.254000+00:00",
+    "received_at": "2026-04-26T15:33:20.507774+00:00"
+  },
+  "raw": {
+    "issue": {
+      "self": "https://your-tenant.atlassian.net/rest/api/2/issue/10138",
+      "id": 10138,
+      "key": "GF-46",
+      "changelog": {
+        "startAt": 0,
+        "maxResults": 0,
+        "total": 0,
+        "histories": null
+      },
+      "fields": {
+        "statuscategorychangedate": "2026-04-25T21:43:54.880+0200",
+        "issuetype": {
+          "namedValue": "Task",
+          "self": "https://your-tenant.atlassian.net/rest/api/2/issuetype/10021",
+          "id": 10021,
+          "description": "Tasks track small, distinct pieces of work.",
+          "iconUrl": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+          "name": "Task",
+          "untranslatedName": null,
+          "subtask": false,
+          "fields": {},
+          "statuses": [],
+          "hierarchyLevel": 0
+        },
+        "parent": {
+          "id": "10136",
+          "key": "GF-45",
+          "self": "https://your-tenant.atlassian.net/rest/api/2/issue/10136",
+          "fields": {
+            "summary": "Team Administrative Tasks",
+            "status": {
+              "self": "https://your-tenant.atlassian.net/rest/api/2/status/10033",
+              "description": "This work item is being actively worked on at the moment by the assignee.",
+              "iconUrl": "https://your-tenant.atlassian.net/",
+              "name": "In Progress",
+              "id": "10033",
+              "statusCategory": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/statuscategory/4",
+                "id": 4,
+                "key": "indeterminate",
+                "colorName": "yellow",
+                "name": "In Progress"
+              }
+            },
+            "priority": {
+              "self": "https://your-tenant.atlassian.net/rest/api/2/priority/3",
+              "iconUrl": "https://your-tenant.atlassian.net/images/icons/priorities/medium_new.svg",
+              "name": "Medium",
+              "id": "3"
+            },
+            "issuetype": {
+              "self": "https://your-tenant.atlassian.net/rest/api/2/issuetype/10022",
+              "id": "10022",
+              "description": "Epics track collections of related bugs, stories, and tasks.",
+              "iconUrl": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10307?size=medium",
+              "name": "Epic",
+              "subtask": false,
+              "avatarId": 10307,
+              "entityId": "d23a108a-267a-4909-8df5-77163897f9ab",
+              "hierarchyLevel": 1
+            }
+          }
+        },
+        "components": [],
+        "timespent": 81000,
+        "timeoriginalestimate": null,
+        "description": "Test User tasks 03",
+        "project": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/project/10005",
+          "id": 10005,
+          "key": "GF",
+          "name": "GFM.DataProcessing",
+          "description": null,
+          "avatarUrls": {
+            "48x48": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10419",
+            "24x24": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10419?size=small",
+            "16x16": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10419?size=xsmall",
+            "32x32": "https://your-tenant.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10419?size=medium"
+          },
+          "issuetypes": null,
+          "projectCategory": null,
+          "email": null,
+          "lead": null,
+          "components": null,
+          "versions": null,
+          "projectTypeKey": "software",
+          "simplified": true
+        },
+        "fixVersions": [],
+        "statusCategory": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/statuscategory/4",
+          "id": 4,
+          "key": "indeterminate",
+          "colorName": "yellow",
+          "name": "In Progress"
+        },
+        "aggregatetimespent": 81000,
+        "resolution": null,
+        "timetracking": {
+          "originalEstimate": null,
+          "remainingEstimate": "0m",
+          "timeSpent": "2d 6h 30m",
+          "originalEstimateSeconds": 0,
+          "remainingEstimateSeconds": 0,
+          "timeSpentSeconds": 81000
+        },
+        "customfield_10015": null,
+        "security": null,
+        "attachment": [],
+        "aggregatetimeestimate": 0,
+        "resolutiondate": null,
+        "workratio": -1,
+        "summary": "Test User tasks",
+        "issuerestriction": {
+          "issuerestrictions": {},
+          "shouldDisplay": true
+        },
+        "lastViewed": "2026-04-26T13:54:44.256+0200",
+        "watches": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/issue/GF-46/watchers",
+          "watchCount": 1,
+          "isWatching": false
+        },
+        "creator": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+          "name": null,
+          "key": null,
+          "accountId": "712020:00000000-0000-0000-0000-000000000000",
+          "emailAddress": null,
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+          },
+          "displayName": "Test User",
+          "active": true,
+          "timeZone": "Europe/Madrid",
+          "groups": null,
+          "locale": null,
+          "accountType": "atlassian"
+        },
+        "subtasks": [],
+        "created": 1746621380265,
+        "reporter": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+          "name": null,
+          "key": null,
+          "accountId": "712020:00000000-0000-0000-0000-000000000000",
+          "emailAddress": null,
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+          },
+          "displayName": "Test User",
+          "active": true,
+          "timeZone": "Europe/Madrid",
+          "groups": null,
+          "locale": null,
+          "accountType": "atlassian"
+        },
+        "customfield_10021": null,
+        "aggregateprogress": {
+          "progress": 81000,
+          "total": 81000,
+          "percent": 100
+        },
+        "priority": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/priority/2",
+          "id": 2,
+          "name": "High",
+          "iconUrl": "https://your-tenant.atlassian.net/images/icons/priorities/high_new.svg",
+          "namedValue": "High"
+        },
+        "customfield_10001": null,
+        "labels": [],
+        "environment": null,
+        "customfield_10019": "0|i00052:",
+        "timeestimate": 0,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "duedate": null,
+        "progress": {
+          "progress": 81000,
+          "total": 81000,
+          "percent": 100
+        },
+        "issuelinks": [],
+        "votes": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/issue/GF-46/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "comment": {
+          "maxResults": 0,
+          "total": 0,
+          "startAt": 0,
+          "comments": [],
+          "last": false
+        },
+        "assignee": {
+          "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+          "name": null,
+          "key": null,
+          "accountId": "712020:00000000-0000-0000-0000-000000000000",
+          "emailAddress": null,
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+          },
+          "displayName": "Test User",
+          "active": true,
+          "timeZone": "Europe/Madrid",
+          "groups": null,
+          "locale": null,
+          "accountType": "atlassian"
+        },
+        "worklog": {
+          "maxResults": 20,
+          "total": 8,
+          "startAt": 0,
+          "worklogs": [
+            {
+              "author": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "updateAuthor": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "comment": "",
+              "created": 1754388250345,
+              "updated": 1754996926401,
+              "visibility": null,
+              "started": 1752138240000,
+              "timeSpent": "2h",
+              "timeSpentSeconds": 7200,
+              "id": "10532",
+              "issueId": "10138",
+              "visibilitySet": false
+            },
+            {
+              "author": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "updateAuthor": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "comment": null,
+              "created": 1756714432243,
+              "updated": 1756729999381,
+              "visibility": null,
+              "started": 1756433580000,
+              "timeSpent": "6h",
+              "timeSpentSeconds": 21600,
+              "id": "10598",
+              "issueId": "10138",
+              "visibilitySet": false
+            },
+            {
+              "author": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "updateAuthor": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "comment": null,
+              "created": 1759406312100,
+              "updated": 1759406312100,
+              "visibility": null,
+              "started": 1759219080000,
+              "timeSpent": "4h",
+              "timeSpentSeconds": 14400,
+              "id": "10704",
+              "issueId": "10138",
+              "visibilitySet": false
+            },
+            {
+              "author": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "updateAuthor": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "comment": null,
+              "created": 1762161851595,
+              "updated": 1762161851595,
+              "visibility": null,
+              "started": 1761899040000,
+              "timeSpent": "1h",
+              "timeSpentSeconds": 3600,
+              "id": "10797",
+              "issueId": "10138",
+              "visibilitySet": false
+            },
+            {
+              "author": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "updateAuthor": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "comment": null,
+              "created": 1764584053454,
+              "updated": 1764584053454,
+              "visibility": null,
+              "started": 1764494040000,
+              "timeSpent": "1h",
+              "timeSpentSeconds": 3600,
+              "id": "10832",
+              "issueId": "10138",
+              "visibilitySet": false
+            },
+            {
+              "author": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "updateAuthor": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "comment": null,
+              "created": 1767125993951,
+              "updated": 1767125993951,
+              "visibility": null,
+              "started": 1767113387234,
+              "timeSpent": "3h 30m",
+              "timeSpentSeconds": 12600,
+              "id": "10901",
+              "issueId": "10138",
+              "visibilitySet": false
+            },
+            {
+              "author": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "updateAuthor": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "comment": "",
+              "created": 1772471428931,
+              "updated": 1772472162235,
+              "visibility": null,
+              "started": 1772291400000,
+              "timeSpent": "3h",
+              "timeSpentSeconds": 10800,
+              "id": "11087",
+              "issueId": "10138",
+              "visibilitySet": false
+            },
+            {
+              "author": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "updateAuthor": {
+                "self": "https://your-tenant.atlassian.net/rest/api/2/user?accountId=712020%3A00000000-0000-0000-0000-000000000000",
+                "name": null,
+                "key": null,
+                "accountId": "712020:00000000-0000-0000-0000-000000000000",
+                "emailAddress": null,
+                "avatarUrls": {
+                  "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/48",
+                  "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/24",
+                  "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/16",
+                  "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/32"
+                },
+                "displayName": "Test User",
+                "active": true,
+                "timeZone": "Europe/Madrid",
+                "groups": null,
+                "locale": null,
+                "accountType": "atlassian"
+              },
+              "comment": null,
+              "created": 1775124636174,
+              "updated": 1775124636174,
+              "visibility": null,
+              "started": 1774944600000,
+              "timeSpent": "2h",
+              "timeSpentSeconds": 7200,
+              "id": "11159",
+              "issueId": "10138",
+              "visibilitySet": false
+            }
+          ],
+          "last": false
+        },
+        "updated": 1777217596213,
+        "status": {
+          "untranslatedNameValue": null,
+          "self": "https://your-tenant.atlassian.net/rest/api/2/status/10033",
+          "description": "This work item is being actively worked on at the moment by the assignee.",
+          "iconUrl": "https://your-tenant.atlassian.net/",
+          "name": "In Progress",
+          "untranslatedName": null,
+          "id": 10033,
+          "statusCategory": {
+            "self": "https://your-tenant.atlassian.net/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      },
+      "renderedFields": null
+    },
+    "user": {
+      "self": null,
+      "name": "712020:00000000-0000-0000-0000-000000000000",
+      "key": "712020:00000000-0000-0000-0000-000000000000",
+      "accountId": "712020:00000000-0000-0000-0000-000000000000",
+      "emailAddress": "testuser@example.com",
+      "avatarUrls": {
+        "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/128",
+        "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/128",
+        "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/128",
+        "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/712020:00000000-0000-0000-0000-000000000000/02f4f0fd-8d06-46a9-90fc-3a7e219b6b74/128"
+      },
+      "displayName": "Test User",
+      "active": true,
+      "timeZone": null,
+      "groups": null,
+      "locale": "en_US",
+      "accountType": "atlassian"
+    },
+    "timestamp": 1777217598254
+  }
+}
