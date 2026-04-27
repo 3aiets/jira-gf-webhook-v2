@@ -282,16 +282,16 @@ log pipeline.
 
 ## Improvement
 - Respond quickly + enqueue async work	Not implemented. Current handler still validates, parses, saves file, then responds. Status: No queue/worker yet.
-- X-Atlassian-Webhook-Identifier. Status:	Partly implemented. Used for in-memory LRU dedup. Not durable after restart.
-- X-Atlassian-Webhook-Retry. Status:	Implemented only as logging. Good first step. Not stored durably.
+- `X-Atlassian-Webhook-Identifier`. Status:	Partly implemented. Used for in-memory LRU dedup. Not durable after restart.
+- `X-Atlassian-Webhook-Retry`. Status:	Implemented only as logging. Good first step. Not stored durably.
 - Sync-state table. Status:	Not implemented. No SQLite DB yet.
 - Dead-letter queue. Status:	Not implemented.
 - Explicit loop prevention. Status:	Not implemented. Not needed until your app writes back to Jira, but good to add before bidirectional sync.
-- Rate limits: 429, Retry-After, exponential backoff. Status:	Not implemented in jira_client.py. It currently uses raise_for_status().
+- Rate limits: `429`, Retry-After, exponential backoff. Status:	Not implemented in `jira_client.py`. It currently uses `raise_for_status()`.
 - Control concurrency / queue workers. Status:	Not implemented.
 - Batching. Status:	Not implemented.
 - OAuth 2.0. Status:	Implemented. OAuth init, token persistence, refresh, webhook CRUD exist.
-- X-Hub-Signature: method=signature. Status:	Not implemented. Current modern auth is JWT bearer.
-- X-RateLimit-*. Status:	Not implemented. Should be captured from outbound Jira API responses.
+- `X-Hub-Signature`: method=signature. Status:	Not implemented. Current modern auth is JWT bearer.
+- `X-RateLimit-*`. Status:	Not implemented. Should be captured from outbound Jira API responses.
 - Use SQLite. Status:	Not implemented. Current persistence is JSON files + in-memory dedup.
-- 
+  
