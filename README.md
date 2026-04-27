@@ -280,7 +280,7 @@ log pipeline.
   contents into commits.
 - The Docker image runs as a non-root user.
 
-## Improvement
+## Improvements
 - Respond quickly + enqueue async work. **Status**:	Not implemented. Current handler still validates, parses, saves file, then responds. Status: No queue/worker yet.
 - `X-Atlassian-Webhook-Identifier`. **Status**:	Partly implemented. Used for in-memory LRU dedup. Not durable after restart.
 - `X-Atlassian-Webhook-Retry`. **Status**:	Implemented only as logging. Good first step. Not stored durably.
